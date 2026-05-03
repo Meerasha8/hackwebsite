@@ -3,6 +3,7 @@ import AnimatedBackground from "@/components/hackgp/AnimatedBackground";
 import Nav from "@/components/hackgp/Nav";
 import Hero from "@/components/hackgp/Hero";
 import RpmScrollGauge from "@/components/hackgp/RpmScrollGauge";
+import PitCrewChat from "@/components/hackgp/PitCrewChat";
 import { About, Tracks, Schedule, Prizes, Sponsors, FAQ, Register, Footer } from "@/components/hackgp/Sections";
 
 const Index = () => {
@@ -25,6 +26,7 @@ const Index = () => {
           </main>
           <Footer />
         </div>
+        <PitCrewChat />
       </div>
     </MotionConfig>
   );
