@@ -222,7 +222,34 @@ export default function PitCrewChat() {
   );
 }
 
-function SteeringWheel() {
+function HelmetIcon() {
+  return (
+    <svg viewBox="0 0 32 32" className="h-7 w-7" fill="none" aria-hidden="true">
+      {/* Helmet shell */}
+      <path
+        d="M5 18c0-6 5-11 11-11s11 5 11 11v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4z"
+        fill="hsl(0 0% 8%)"
+        stroke="hsl(var(--gold))"
+        strokeWidth="1.4"
+      />
+      {/* Top racing stripe */}
+      <path d="M16 7v6" stroke="hsl(var(--gold))" strokeWidth="1.4" strokeLinecap="round" />
+      {/* Visor */}
+      <path
+        d="M9 14h14v4a2 2 0 0 1-2 2H11a2 2 0 0 1-2-2v-4z"
+        fill="hsl(var(--gold))"
+        stroke="hsl(0 0% 0%)"
+        strokeWidth="0.8"
+      />
+      {/* Visor highlight */}
+      <path d="M11 15.5h6" stroke="hsl(0 0% 100% / 0.6)" strokeWidth="0.8" strokeLinecap="round" />
+      {/* Chin guard */}
+      <path d="M7 22h18" stroke="hsl(var(--primary))" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+
   return (
     <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
       <circle cx="12" cy="12" r="9" stroke="hsl(var(--gold))" />
