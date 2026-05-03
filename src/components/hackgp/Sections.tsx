@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
+import RegisterForm from "./RegisterForm";
 
 export function About() {
   const stats = [
@@ -281,15 +282,7 @@ export function Register() {
         <p className="font-body text-silver max-w-lg mx-auto mb-8">
           1,000 spots. 27 nationalities. One chance to write your name on the trophy.
         </p>
-        <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="email"
-            required
-            placeholder="driver@team.gp"
-            className="flex-1 bg-background border border-racing/30 px-5 py-3 font-ui-reg text-sm focus:outline-none focus:border-racing transition"
-          />
-          <button type="submit" className="btn-primary-f1">Apply →</button>
-        </form>
+        <RegisterForm />
         <p className="font-ui text-[10px] text-muted-foreground mt-5">APPLICATIONS CLOSE JULY 31, 2026 · ROLLING ADMISSIONS</p>
       </motion.div>
     </section>
