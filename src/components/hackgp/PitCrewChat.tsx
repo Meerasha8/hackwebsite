@@ -120,7 +120,7 @@ export default function PitCrewChat() {
         transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-[60] h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--primary)/0.6)] border border-gold/40 flex items-center justify-center font-display text-lg"
+        className={`fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-[60] h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--primary)/0.6)] border border-gold/40 items-center justify-center font-display text-lg ${open ? "hidden sm:flex" : "flex"}`}
       >
         {open ? "✕" : "🏎"}
       </motion.button>
