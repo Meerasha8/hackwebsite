@@ -31,15 +31,15 @@ export function About() {
 }
 
 const tracks = [
-  { n: "01", t: "Telemetry & AI", d: "Real-time race data, predictive analytics, ML on the edge.", c: "racing-red" },
-  { n: "02", t: "Aerodynamics Sim", d: "CFD in the browser, generative wing design, drag visualizers.", c: "gold" },
-  { n: "03", t: "Pit Wall Tools", d: "Strategy dashboards, tyre models, fuel optimization.", c: "silver" },
-  { n: "04", t: "Fan Experience", d: "Second-screen apps, AR overlays, community platforms.", c: "racing-red" },
-  { n: "05", t: "Sustainable Mobility", d: "EV charging, alt fuels, carbon-aware logistics.", c: "gold" },
-  { n: "06", t: "Driver Performance", d: "Wearables, biometrics, training simulators.", c: "silver" },
-  { n: "07", t: "Autonomous Racing", d: "Self-driving in milliseconds. Sim-to-real RL agents.", c: "racing-red" },
-  { n: "08", t: "Open Innovation", d: "Surprise us. The wildest ideas win at HACKGP.", c: "gold" },
-  { n: "09", t: "Hardware Garage", d: "Embedded, IoT, robotics for the paddock of tomorrow.", c: "silver" },
+  { n: "01", t: "Telemetry & AI", d: "Real-time race data, predictive analytics, ML on the edge.", c: "text-racing-red" },
+  { n: "02", t: "Aerodynamics Sim", d: "CFD in the browser, generative wing design, drag visualizers.", c: "text-gold" },
+  { n: "03", t: "Pit Wall Tools", d: "Strategy dashboards, tyre models, fuel optimization.", c: "text-silver" },
+  { n: "04", t: "Fan Experience", d: "Second-screen apps, AR overlays, community platforms.", c: "text-racing-red" },
+  { n: "05", t: "Sustainable Mobility", d: "EV charging, alt fuels, carbon-aware logistics.", c: "text-gold" },
+  { n: "06", t: "Driver Performance", d: "Wearables, biometrics, training simulators.", c: "text-silver" },
+  { n: "07", t: "Autonomous Racing", d: "Self-driving in milliseconds. Sim-to-real RL agents.", c: "text-racing-red" },
+  { n: "08", t: "Open Innovation", d: "Surprise us. The wildest ideas win at HACKGP.", c: "text-gold" },
+  { n: "09", t: "Hardware Garage", d: "Embedded, IoT, robotics for the paddock of tomorrow.", c: "text-silver" },
 ];
 
 export function Tracks() {
@@ -57,7 +57,7 @@ export function Tracks() {
             className="f1-card f1-card-hover p-6 group"
           >
             <div className="flex items-start justify-between mb-6">
-              <span className={`font-display text-2xl text-${t.c}`}>{t.n}</span>
+              <span className={`font-display text-2xl ${t.c}`}>{t.n}</span>
               <div className="checker-pattern w-6 h-6 opacity-30 group-hover:opacity-100 transition" />
             </div>
             <h3 className="font-display-md text-lg mb-2">{t.t}</h3>
@@ -123,9 +123,9 @@ export function Schedule() {
 }
 
 const podium = [
-  { pos: "P1", title: "Pole position", prize: "$120,000", perks: ["Garage tour at a real F1 team", "Direct intro to top VCs", "Featured in Autosport Magazine"], color: "gold", height: "h-64" },
-  { pos: "P2", title: "Front row", prize: "$70,000", perks: ["Paddock club tickets", "Cloud credits ($50K)", "Sponsor mentorship"], color: "silver", height: "h-52" },
-  { pos: "P3", title: "Podium finish", prize: "$40,000", perks: ["Premium hardware kit", "Conference passes", "Recruiter spotlight"], color: "racing-red", height: "h-44" },
+  { pos: "P1", title: "Pole position", prize: "$120,000", perks: ["Garage tour at a real F1 team", "Direct intro to top VCs", "Featured in Autosport Magazine"], bar: "bg-gold", txt: "text-gold" },
+  { pos: "P2", title: "Front row", prize: "$70,000", perks: ["Paddock club tickets", "Cloud credits ($50K)", "Sponsor mentorship"], bar: "bg-silver", txt: "text-silver" },
+  { pos: "P3", title: "Podium finish", prize: "$40,000", perks: ["Premium hardware kit", "Conference passes", "Recruiter spotlight"], bar: "bg-racing", txt: "text-racing-red" },
 ];
 
 export function Prizes() {
@@ -142,9 +142,9 @@ export function Prizes() {
             transition={{ duration: 0.6, delay: i * 0.15 }}
             className="f1-card f1-card-hover p-7 relative"
           >
-            <div className={`absolute -top-px left-0 right-0 h-0.5 bg-${p.color}`} />
+            <div className={`absolute -top-px left-0 right-0 h-0.5 ${p.bar}`} />
             <div className="flex items-center justify-between mb-4">
-              <span className={`font-display text-4xl text-${p.color}`}>{p.pos}</span>
+              <span className={`font-display text-4xl ${p.txt}`}>{p.pos}</span>
               <span className="font-ui text-[10px] text-silver">{p.title}</span>
             </div>
             <div className="font-display text-3xl mb-6">{p.prize}</div>
