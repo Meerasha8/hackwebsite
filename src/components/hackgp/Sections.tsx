@@ -265,7 +265,13 @@ export function FAQ() {
 export function Register() {
   return (
     <section id="register" className="py-28 px-5 max-w-4xl mx-auto relative">
-      <div className="f1-card p-10 sm:p-16 text-center relative overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 30, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.7 }}
+        className="f1-card p-10 sm:p-16 text-center relative overflow-hidden"
+      >
         <div className="absolute top-0 left-0 right-0 h-1 racing-stripe" />
         <div className="absolute bottom-3 left-3 right-3 checker-pattern h-3 opacity-40" />
         <div className="font-ui text-xs text-gold mb-3">FORMATION LAP STARTS SOON</div>
@@ -285,7 +291,7 @@ export function Register() {
           <button type="submit" className="btn-primary-f1">Apply →</button>
         </form>
         <p className="font-ui text-[10px] text-muted-foreground mt-5">APPLICATIONS CLOSE JULY 31, 2026 · ROLLING ADMISSIONS</p>
-      </div>
+      </motion.div>
     </section>
   );
 }
