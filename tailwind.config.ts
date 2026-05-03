@@ -13,7 +13,15 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Orbitron', 'sans-serif'],
+        ui: ['Rajdhani', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
       colors: {
+        gold: { DEFAULT: "hsl(var(--gold))", foreground: "hsl(var(--gold-foreground))" },
+        silver: "hsl(var(--silver))",
+        racing: "hsl(var(--primary))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

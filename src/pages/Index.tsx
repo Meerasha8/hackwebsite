@@ -1,16 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import AnimatedBackground from "@/components/hackgp/AnimatedBackground";
+import Nav from "@/components/hackgp/Nav";
+import Hero from "@/components/hackgp/Hero";
+import { About, Tracks, Schedule, Prizes, Sponsors, FAQ, Register, Footer } from "@/components/hackgp/Sections";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
+      <AnimatedBackground />
+      <div className="relative z-10">
+        <Nav />
+        <main>
+          <Hero />
+          <About />
+          <Tracks />
+          <Schedule />
+          <Prizes />
+          <Sponsors />
+          <FAQ />
+          <Register />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
