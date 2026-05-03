@@ -249,7 +249,7 @@ function HelmetIcon() {
   );
 }
 
-
+function SteeringWheel() {
   return (
     <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
       <circle cx="12" cy="12" r="9" stroke="hsl(var(--gold))" />
