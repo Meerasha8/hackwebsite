@@ -19,7 +19,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1 }}
-        className="font-display text-[18vw] sm:text-[16vw] md:text-[12vw] lg:text-[10rem] leading-[0.85] text-center"
+        className="font-display text-[13vw] sm:text-[12vw] md:text-[11vw] lg:text-[9rem] leading-[0.85] text-center tracking-tight whitespace-nowrap"
       >
         <span className="text-foreground">VELOCITY</span>
         <span className="text-racing-red">X</span>
