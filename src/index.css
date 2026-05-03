@@ -67,6 +67,25 @@
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
   }
+
+  /* Accessibility: visible keyboard focus */
+  :focus { outline: none; }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid hsl(var(--gold));
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px hsl(var(--gold) / 0.25);
+    border-radius: 2px;
+  }
+  .btn-primary-f1:focus-visible,
+  .btn-ghost-f1:focus-visible {
+    outline-offset: 4px;
+  }
 }
 
 @layer components {
