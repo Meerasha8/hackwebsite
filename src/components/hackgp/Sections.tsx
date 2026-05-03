@@ -190,19 +190,32 @@ export function Sponsors() {
     <section id="sponsors" className="py-28 px-5 max-w-7xl mx-auto relative">
       <SectionHeader num="05" kicker="ON THE LIVERY" title="Backed by the paddock." />
       <div className="space-y-10">
-        {sponsorTiers.map((tier) => (
-          <div key={tier.tier}>
+        {sponsorTiers.map((tier, ti) => (
+          <motion.div
+            key={tier.tier}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: ti * 0.1 }}
+          >
             <div className="font-ui text-[10px] text-gold mb-4">{tier.tier}</div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-racing/20">
-              {tier.names.map((n) => (
-                <div key={n} className="bg-background py-8 px-4 text-center f1-card-hover">
+              {tier.names.map((n, i) => (
+                <motion.div
+                  key={n}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.35, delay: i * 0.05 }}
+                  className="bg-background py-8 px-4 text-center f1-card-hover"
+                >
                   <span className="font-display text-sm sm:text-base tracking-widest text-silver hover:text-foreground transition">
                     {n}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
