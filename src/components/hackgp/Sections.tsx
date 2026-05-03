@@ -12,17 +12,30 @@ export function About() {
     <section id="about" className="py-28 px-5 max-w-7xl mx-auto relative">
       <SectionHeader num="01" kicker="THE BRIEFING" title="A hackathon at racing speed." />
       <div className="grid md:grid-cols-2 gap-12 items-start">
-        <p className="font-body text-lg text-silver leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="font-body text-lg text-silver leading-relaxed"
+        >
           HACKGP is the world's most intense engineering grand prix. For 48 hours, teams of four engineers, designers
           and dreamers compete to ship the boldest software in motorsport, mobility and human performance. There are no
           pit stops. Only chequered flags.
-        </p>
+        </motion.p>
         <div className="grid grid-cols-2 gap-px bg-racing/20">
-          {stats.map((s) => (
-            <div key={s.l} className="bg-background p-6">
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.l}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-background p-6"
+            >
               <div className="font-display text-4xl text-foreground">{s.v}</div>
               <div className="font-ui text-[11px] text-silver mt-2">{s.l}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
