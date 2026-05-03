@@ -20,7 +20,7 @@ export function About() {
           transition={{ duration: 0.6 }}
           className="font-body text-lg text-silver leading-relaxed"
         >
-          HACKGP is the world's most intense engineering grand prix. For 48 hours, teams of four engineers, designers
+          VelocityX is the world's most intense engineering grand prix. For 48 hours, teams of four engineers, designers
           and dreamers compete to ship the boldest software in motorsport, mobility and human performance. There are no
           pit stops. Only chequered flags.
         </motion.p>
@@ -52,7 +52,7 @@ const tracks = [
   { n: "05", t: "Sustainable Mobility", d: "EV charging, alt fuels, carbon-aware logistics.", c: "text-gold" },
   { n: "06", t: "Driver Performance", d: "Wearables, biometrics, training simulators.", c: "text-silver" },
   { n: "07", t: "Autonomous Racing", d: "Self-driving in milliseconds. Sim-to-real RL agents.", c: "text-racing-red" },
-  { n: "08", t: "Open Innovation", d: "Surprise us. The wildest ideas win at HACKGP.", c: "text-gold" },
+  { n: "08", t: "Open Innovation", d: "Surprise us. The wildest ideas win at VelocityX.", c: "text-gold" },
   { n: "09", t: "Hardware Garage", d: "Embedded, IoT, robotics for the paddock of tomorrow.", c: "text-silver" },
 ];
 
@@ -226,12 +226,12 @@ export function Sponsors() {
 const faqs = [
   { q: "Who can enter the race?", a: "Anyone 18+ who can write code, design, or build hardware. Students, professionals, weekend warriors — all welcome on the grid." },
   { q: "Do I need a team?", a: "Teams of 1–4. Solo drivers can find a team at the opening mixer or via our team-matching Discord channel." },
-  { q: "How much does it cost?", a: "$0. HACKGP is free for all qualified entrants. Travel grants are available — apply during registration." },
+  { q: "How much does it cost?", a: "$0. VelocityX is free for all qualified entrants. Travel grants are available — apply during registration." },
   { q: "What do I need to bring?", a: "Your laptop, charger, and a competitive spirit. Hardware kits are provided for the Garage track." },
   { q: "Is the event remote or in-person?", a: "Primary venue is Monaco, with satellite circuits in São Paulo, Singapore, Austin and Tokyo. Remote teams compete in their own bracket." },
   { q: "What's judged?", a: "Technical execution, originality, design quality, and on-stage demo. Three judges per submission, scored 1–10 across each axis." },
   { q: "Can I start before lights-out?", a: "No code may be written before 13:00 on Day 1. Pre-existing open-source libraries are fair game — claim them in your submission." },
-  { q: "I have more questions.", a: "Drop them in the HACKGP Discord — race control answers within 4 hours, 24/7 during race week." },
+  { q: "I have more questions.", a: "Drop them in the VelocityX Discord — race control answers within 4 hours, 24/7 during race week." },
 ];
 
 export function FAQ() {
@@ -311,14 +311,14 @@ export function Footer() {
         <div>
           <div className="font-ui text-[10px] text-gold mb-3">RACE CONTROL</div>
           <ul className="space-y-2 font-ui-reg text-sm text-silver">
-            <li>hello@hackgp.dev</li>
+            <li>hello@velocityx.dev</li>
             <li>Discord · Twitter · GitHub</li>
             <li>Code of Conduct</li>
           </ul>
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-racing/15 flex flex-wrap gap-3 justify-between items-center">
-        <span className="font-ui text-[10px] text-muted-foreground">© 2026 HACKGP. NOT AFFILIATED WITH ANY RACING SERIES.</span>
+        <span className="font-ui text-[10px] text-muted-foreground">© 2026 VelocityX. NOT AFFILIATED WITH ANY RACING SERIES.</span>
         <div className="checker-pattern w-24 h-3 opacity-40" />
       </div>
     </footer>

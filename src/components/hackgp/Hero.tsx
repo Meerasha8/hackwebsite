@@ -21,8 +21,8 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.1 }}
         className="font-display text-[18vw] sm:text-[16vw] md:text-[12vw] lg:text-[10rem] leading-[0.85] text-center"
       >
-        <span className="text-foreground">HACK</span>
-        <span className="text-racing-red">GP</span>
+        <span className="text-foreground">VELOCITY</span>
+        <span className="text-racing-red">X</span>
       </motion.h1>
 
       <motion.div

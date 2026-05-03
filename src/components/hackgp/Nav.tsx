@@ -29,7 +29,7 @@ export default function Nav() {
             </div>
           </div>
           <span className="font-display text-lg tracking-wider">
-            HACK<span className="text-racing-red">GP</span>
+            VELOCITY<span className="text-racing-red">X</span>
           </span>
           <span className="font-ui text-[10px] text-silver hidden sm:inline border-l border-racing/40 pl-2 ml-1">
             2026
