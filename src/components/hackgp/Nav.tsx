@@ -32,7 +32,7 @@ export default function Nav() {
             HACK<span className="text-racing-red">GP</span>
           </span>
           <span className="font-ui text-[10px] text-silver hidden sm:inline border-l border-racing/40 pl-2 ml-1">
-            2025
+            2026
           </span>
         </a>
 

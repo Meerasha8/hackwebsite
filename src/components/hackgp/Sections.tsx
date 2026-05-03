@@ -12,17 +12,30 @@ export function About() {
     <section id="about" className="py-28 px-5 max-w-7xl mx-auto relative">
       <SectionHeader num="01" kicker="THE BRIEFING" title="A hackathon at racing speed." />
       <div className="grid md:grid-cols-2 gap-12 items-start">
-        <p className="font-body text-lg text-silver leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="font-body text-lg text-silver leading-relaxed"
+        >
           HACKGP is the world's most intense engineering grand prix. For 48 hours, teams of four engineers, designers
           and dreamers compete to ship the boldest software in motorsport, mobility and human performance. There are no
           pit stops. Only chequered flags.
-        </p>
+        </motion.p>
         <div className="grid grid-cols-2 gap-px bg-racing/20">
-          {stats.map((s) => (
-            <div key={s.l} className="bg-background p-6">
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.l}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-background p-6"
+            >
               <div className="font-display text-4xl text-foreground">{s.v}</div>
               <div className="font-ui text-[11px] text-silver mt-2">{s.l}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -177,19 +190,32 @@ export function Sponsors() {
     <section id="sponsors" className="py-28 px-5 max-w-7xl mx-auto relative">
       <SectionHeader num="05" kicker="ON THE LIVERY" title="Backed by the paddock." />
       <div className="space-y-10">
-        {sponsorTiers.map((tier) => (
-          <div key={tier.tier}>
+        {sponsorTiers.map((tier, ti) => (
+          <motion.div
+            key={tier.tier}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: ti * 0.1 }}
+          >
             <div className="font-ui text-[10px] text-gold mb-4">{tier.tier}</div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-racing/20">
-              {tier.names.map((n) => (
-                <div key={n} className="bg-background py-8 px-4 text-center f1-card-hover">
+              {tier.names.map((n, i) => (
+                <motion.div
+                  key={n}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.35, delay: i * 0.05 }}
+                  className="bg-background py-8 px-4 text-center f1-card-hover"
+                >
                   <span className="font-display text-sm sm:text-base tracking-widest text-silver hover:text-foreground transition">
                     {n}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
@@ -239,7 +265,13 @@ export function FAQ() {
 export function Register() {
   return (
     <section id="register" className="py-28 px-5 max-w-4xl mx-auto relative">
-      <div className="f1-card p-10 sm:p-16 text-center relative overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 30, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.7 }}
+        className="f1-card p-10 sm:p-16 text-center relative overflow-hidden"
+      >
         <div className="absolute top-0 left-0 right-0 h-1 racing-stripe" />
         <div className="absolute bottom-3 left-3 right-3 checker-pattern h-3 opacity-40" />
         <div className="font-ui text-xs text-gold mb-3">FORMATION LAP STARTS SOON</div>
@@ -259,7 +291,7 @@ export function Register() {
           <button type="submit" className="btn-primary-f1">Apply →</button>
         </form>
         <p className="font-ui text-[10px] text-muted-foreground mt-5">APPLICATIONS CLOSE JULY 31, 2026 · ROLLING ADMISSIONS</p>
-      </div>
+      </motion.div>
     </section>
   );
 }
