@@ -120,7 +120,7 @@ export default function PitCrewChat() {
         transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--primary)/0.6)] border border-gold/40 flex items-center justify-center font-display text-lg"
+        className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--primary)/0.6)] border border-gold/40 flex items-center justify-center font-display text-lg"
       >
         {open ? "✕" : "🏎"}
       </motion.button>
@@ -132,7 +132,7 @@ export default function PitCrewChat() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.96 }}
             transition={{ duration: 0.25 }}
-            className="fixed bottom-24 left-6 z-50 w-[min(92vw,380px)] h-[min(78vh,560px)] rounded-lg bg-card border border-primary/30 shadow-[0_20px_60px_-10px_hsl(var(--primary)/0.4)] flex flex-col overflow-hidden"
+            className="fixed z-50 bg-card border border-primary/30 shadow-[0_20px_60px_-10px_hsl(var(--primary)/0.4)] flex flex-col overflow-hidden inset-0 sm:inset-auto sm:bottom-24 sm:left-6 sm:w-[min(92vw,380px)] sm:h-[min(78vh,560px)] sm:rounded-lg"
             role="dialog"
             aria-label="Race Control AI chat"
           >
