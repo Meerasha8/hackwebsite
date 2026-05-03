@@ -15,7 +15,7 @@ export default function PitCrewChat() {
     {
       role: "assistant",
       content:
-        "🏁 **Race Control online.** I'm an AI pit-crew assistant — ask me anything about HACKGP: tracks, schedule, prizes, teams, or how to enter. Replies are AI-generated and stream live.",
+        "🏁 **Race Control online.** I'm an AI pit-crew assistant — ask me anything about VelocityX: tracks, schedule, prizes, teams, or how to enter. Replies are AI-generated and stream live.",
     },
   ]);
   const scrollRef = useRef<HTMLDivElement>(null);
