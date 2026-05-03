@@ -19,7 +19,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1 }}
-        className="font-display text-[26vw] sm:text-[18vw] md:text-[12vw] lg:text-[10rem] leading-[0.85] text-center"
+        className="font-display text-[18vw] sm:text-[16vw] md:text-[12vw] lg:text-[10rem] leading-[0.85] text-center"
       >
         <span className="text-foreground">HACK</span>
         <span className="text-racing-red">GP</span>
