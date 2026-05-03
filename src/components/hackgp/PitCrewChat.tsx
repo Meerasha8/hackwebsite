@@ -144,9 +144,18 @@ export default function PitCrewChat() {
                   <div className="font-ui text-[10px] text-gold tracking-widest">RACE CONTROL · AI</div>
                   <div className="font-display text-base">PIT <span className="text-racing-red">CREW</span></div>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="font-ui text-[10px] text-silver">LIVE AI</span>
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                    <span className="font-ui text-[10px] text-silver">LIVE AI</span>
+                  </div>
+                  <button
+                    onClick={() => setOpen(false)}
+                    aria-label="Close chat"
+                    className="h-8 w-8 rounded-full border border-primary/40 text-foreground hover:bg-primary/10 grid place-items-center font-display text-sm"
+                  >
+                    ✕
+                  </button>
                 </div>
               </div>
             </div>
